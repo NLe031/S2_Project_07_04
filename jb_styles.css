@@ -20,7 +20,7 @@ a#nav-toggle {
 
 /* HTML and Body Styles */
 html {
-    background: url(jb_back1.png);
+    background: url(jb_back2.png) no-repeat;
     background-size: 100%;
     width: 100%;
 }
@@ -28,15 +28,51 @@ html {
 body {
     min-width: 320px;
     max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     height: 100%;
-    width: 100%;
+    width: 95%;
+    background-color:
 }
 
 header>img {
-    width: 30%;
+    display: block;
+    width: 1024px;
+    height: 150px;
+    margin: 0px;
+    /* margin-left: 190px; */
 }
 
+/* Article Styles */
+article p {
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+
+/* Section Styles */
+section#main {
+    -webkit-flex: 3 1 340px;
+    flex: 3 1 340px;
+}
+
+section#box {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+section#box article {
+    -webkit-flex: 1 1 150px;
+    flex: 1 1 150px;
+}
+
+/* Nav Styles */
+.horizontal {
+    background-color: white;
+    text-align: center;
+}
 
 /* Drop Menu Styles */
 ul.submenu {
@@ -46,6 +82,14 @@ ul.submenu {
 a.dropmenu:hover+ul.submenu,
 ul.submenu:hover {
     display: block;
+}
+
+/* footer Styles */
+footer {
+    padding: 8px;
+    color: rgba(21, 17, 17, .6);
+    margin: 1px;
+    text-align: center;
 }
 
 /* Media Query */
