@@ -19,6 +19,7 @@ a#nav-toggle {
 }
 
 /* HTML and Body Styles */
+/* Adds a background image to the page */
 html {
     background: url(jb_back2.png) no-repeat;
     background-size: 100%;
@@ -33,24 +34,32 @@ body {
     display: block;
     height: 100%;
     width: 95%;
-    background-color:
+    background-color: white;
 }
 
+/* Changes the size of the logo */
 header>img {
     display: block;
-    width: 1024px;
+    width: 500px;
     height: 150px;
     margin: 0px;
     /* margin-left: 190px; */
 }
 
 /* Article Styles */
+/* adds a margin to the description list */
 article p {
     padding: 15px;
     font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
 }
 
+article>dl {
+    margin-left: 10px;
+    border: 2px solid violet;
+}
+
 /* Section Styles */
+/* Separates the paragraphs into 3 sections */
 section#main {
     -webkit-flex: 3 1 340px;
     flex: 3 1 340px;
@@ -69,12 +78,15 @@ section#box article {
 }
 
 /* Nav Styles */
+/* Attaches the nav to the logo and changes the background color */
 .horizontal {
     background-color: white;
     text-align: center;
+    margin-left: 60px;
 }
 
 /* Drop Menu Styles */
+/* Creates a drop down menu */
 ul.submenu {
     display: none;
 }
@@ -84,7 +96,22 @@ ul.submenu:hover {
     display: block;
 }
 
+ul.mainmenu>li {
+    float: left;
+    width: 16%;
+    position: relative;
+}
+
+ul.submenu {
+    width: 100%;
+    box-shadow: rgb(51, 51, 51) -5px 5px 15px;
+    position: absolute;
+    background-color: rgb(49, 182, 182);
+}
+
+
 /* footer Styles */
+/* Makes the footer transparent and centers it */
 footer {
     padding: 8px;
     color: rgba(21, 17, 17, .6);
@@ -101,8 +128,30 @@ footer {
     nav.horizontal a {
         font-size: 1.5em;
         line-height: 2.2em;
+        background-color: rgba(21, 17, 17, 0)
     }
 
+    a.nav-toggle {
+        display: block;
+    }
+
+    nav ul.mainmenu {
+        display: none;
+    }
+
+    a.nav-toggle:hover+ul,
+    nav ul:hover {
+        display: block;
+    }
+
+    article>dl {
+        display: none;
+    }
+
+    article#order {
+        -webkit-order: 100;
+        order: 100;
+    }
 }
 
 /* ----------- iPhone 4 and 4S ----------- */
